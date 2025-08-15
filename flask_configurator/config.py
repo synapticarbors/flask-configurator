@@ -74,7 +74,7 @@ def update_config_from_file(
 
     if env:
         env_filename = envified_config_filename(filename, env)
-        env_config = read_config_file(env_filename, True, text)
+        env_config = read_config_file(env_filename, silent=True, text=text)
         if env_config is not False and logger:
             logger.info("Loaded config from %s" % env_filename)
         if env_config:

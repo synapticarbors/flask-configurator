@@ -1,9 +1,9 @@
 from flask import Flask, jsonify
-from flask_configurator import FlaskConfigurator
+from flask_configurator import Configurator
 
 
 app = Flask(__name__)
-config = FlaskConfigurator(app)
+config = Configurator(app)
 
 
 @app.route("/")

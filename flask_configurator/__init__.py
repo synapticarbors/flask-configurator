@@ -11,7 +11,7 @@ class Configurator(Config):
         if default_env is None:
             default_env = "development" if app.debug else "production"
         super().__init__(app.root_path, env_prefix=env_prefix, logger=app.logger)
-        self.load(default_file)
+        self.load(default_file, default_env)
         app.config.update(self)
         if watch:
             watch_config(app, default_file)
