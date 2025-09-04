@@ -31,8 +31,3 @@ line-length = 100
 [build-system]
 requires = ["uv_build>=0.8.11,<0.9.0"]
 build-backend = "uv_build"
-
-[tool.uv.build-backend]
-module-name = "flask_configurator"
-module-root = ""
-source-exclude = ["example"]
